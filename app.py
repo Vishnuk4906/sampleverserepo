@@ -11,6 +11,8 @@ genai.configure(api_key="AIzaSyAyflgig0oBMy8y3YNtusBS_KNKvau3apc")
 
 model = genai.GenerativeModel("gemini-1.5-flash")
 
+image_ = "sample.jpeg"
+st.image(image_,use_column_width=False)
 def fn_template(query,verses):
     template = f"Your designed to give good and motivated insights to the believer.\
                 you have the believer's query and the verses from bible related to that.your role is to create \
@@ -45,7 +47,8 @@ def display_verse_with_metadata(verse, metadata):
     st.markdown(formatted_text)
 
 # Streamlit input and display
-input_text = st.text_input("Enter your query")
+st.subheader("Tell jesus what you feel!")
+input_text = st.text_input(label="")
 if st.button("Get verse"):
     if input_text:
         idxs = search_query(input_text)
