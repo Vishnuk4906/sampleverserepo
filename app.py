@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 from IPython.display import display, Markdown
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyAyflgig0oBMy8y3YNtusBS_KNKvau3apc")
+genai.configure(api_key="")
 
 model = genai.GenerativeModel("gemini-1.5-flash")
 
