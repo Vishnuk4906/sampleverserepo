@@ -6,8 +6,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 from IPython.display import display, Markdown
+from dotenv import load_dotenv
+load_dotenv()
 import google.generativeai as genai
-genai.configure(api_key="")
+genai.configure(api_key=os.getenv("key")
 
 model = genai.GenerativeModel("gemini-1.5-flash")
 
