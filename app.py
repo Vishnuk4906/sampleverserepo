@@ -9,7 +9,7 @@ from IPython.display import display, Markdown
 from dotenv import load_dotenv
 load_dotenv()
 import google.generativeai as genai
-genai.configure(api_key=os.getenv("key")
+genai.configure(api_key=os.getenv("key"))
 
 model = genai.GenerativeModel("gemini-1.5-flash")
 
