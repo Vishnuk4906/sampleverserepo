@@ -6,3 +6,4 @@ scikit-learn
 streamlit
 google-generativeai
 IPython
+python-dotenv==1.0.1
